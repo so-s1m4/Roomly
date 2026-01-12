@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {Block} from '@shared/ui/block/block';
+import {NgIcon} from '@ng-icons/core';
+import {Icons} from '@models/Icons.enum';
+import {GamesService} from '@features/games/services/games.service';
+import {Game} from '@features/games/components/game/game';
 
 @Component({
   selector: 'app-main-page',
-  imports: [],
+  imports: [
+    Block,
+    NgIcon,
+    Game
+  ],
   templateUrl: './main-page.html',
   styleUrl: './main-page.css',
 })
 export class MainPage {
-
+  gamesService = inject(GamesService);
+  games = this.gamesService.games;
+  protected readonly Icons = Icons;
 }

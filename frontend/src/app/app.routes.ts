@@ -5,38 +5,40 @@ import GamesRoutes from '@features/games/routes';
 import ClientsRoutes from '@features/clients/routes';
 import UsersRoutes from '@features/users/routes';
 import SettingsRoutes from '@features/settings/routes';
+import {RouteContextService} from '@services/route-context.service';
 
 export const routes: Routes = [
   {
-    path: 'org/:orgId',
+    path: 'org',
     children: [
       {
-        path: 'node/:nodeId',
-        loadComponent: () =>
-          import('./layout/layout').then(m => m.Layout),
-        children: [
-          ...DashboardRoutes,
-          ...SessionRoutes,
-          ...GamesRoutes,
-          ...ClientsRoutes,
-          ...UsersRoutes,
-          ...SettingsRoutes
-        ]
-      },
-
-      // /org/:orgId/node → /org/:orgId/node/root
-      {
-        path: 'node',
-        redirectTo: 'node/root',
-        pathMatch: 'full',
-      },
-
-      // /org/:orgId → /org/:orgId/node/root
-      {
         path: '',
-        redirectTo: 'node/root',
+        loadComponent: () =>
+          import('@features/org-selection/org-selection').then(m => m.OrgSelection),
         pathMatch: 'full',
+      },
+      {
+        path: ':orgId',
+        children: [
+          {
+            path: 'node/:nodeId',
+            loadComponent: () =>
+              import('./layout/layout').then(m => m.Layout),
+            children: [
+              ...DashboardRoutes,
+              ...SessionRoutes,
+              ...GamesRoutes,
+              ...ClientsRoutes,
+              ...UsersRoutes,
+              ...SettingsRoutes,
+            ],
+          },
+          { path: 'node', redirectTo: 'node/root', pathMatch: 'full' },
+          { path: '', redirectTo: 'node/root', pathMatch: 'full' },
+        ],
       },
     ],
   },
+  { path: '', redirectTo: 'org', pathMatch: 'full' },
+  { path: '**', redirectTo: 'org' },
 ];

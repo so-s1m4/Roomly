@@ -31,3 +31,12 @@
 .nav.opened > *:last-child {
   border-bottom: none;
 }
+
+.holder {
+  width: calc(100% - 255px);
+  height: 100%;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}

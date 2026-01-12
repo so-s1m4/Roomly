@@ -1,0 +1,23 @@
+<app-block>
+  <div class="header">
+    <img [src]="data()?.img?.image_path" alt="">
+    <h1 style="color: var(--text-color-primary)">Game Title</h1>
+  </div>
+  <div class="info">
+    <div class="item">
+      {{data()?.description}}
+    </div>
+    <div class="item">
+      <div class="label">Duration</div>
+      <div class="value">{{data()?.playTime?.min}}-{{data()?.playTime?.max}} min</div>
+    </div>
+    <div class="item">
+      <div class="label">Players</div>
+      <div class="value">{{data()?.players?.min}}-{{data()?.players?.max}} <ng-icon [name]="Icons.UserGroup"></ng-icon></div>
+    </div>
+    <div class="item">
+      <div class="label">Difficulty</div>
+      <div class="value">{{data()?.difficulty}}</div>
+    </div>
+  </div>
+</app-block>

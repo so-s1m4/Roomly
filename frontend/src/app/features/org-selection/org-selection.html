@@ -1,0 +1,10 @@
+<app-block>
+  <div class="header"><h1>Please choose a firm</h1></div>
+  <div class="body">
+    @for (org of orgs(); track org.id) {
+      <div class="org-button" (click)="selectOrg(org)">
+        <h2>{{ org.title }}</h2>
+      </div>
+    }
+  </div>
+</app-block>

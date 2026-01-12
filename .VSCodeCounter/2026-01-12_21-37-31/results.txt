@@ -1,0 +1,177 @@
+Date : 2026-01-12 21:37:31
+Directory : /Users/maksym/Documents/Projects/Roomly/frontend/src
+Total : 95 files,  1910 codes, 34 comments, 352 blanks, all 2296 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| TypeScript |         51 |      1,207 |         30 |        207 |      1,444 |
+| PostCSS    |         22 |        504 |          4 |        120 |        628 |
+| HTML       |         22 |        199 |          0 |         25 |        224 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                          |         95 |      1,910 |         34 |        352 |      2,296 |
+| . (Files)                                                                                                  |          3 |        117 |          2 |         28 |        147 |
+| app                                                                                                        |         92 |      1,793 |         32 |        324 |      2,149 |
+| app (Files)                                                                                                |          5 |         80 |          6 |         14 |        100 |
+| app/core                                                                                                   |         16 |        502 |          5 |         61 |        568 |
+| app/core/environment                                                                                       |          1 |          2 |          0 |          1 |          3 |
+| app/core/guards                                                                                            |          2 |         60 |          0 |         12 |         72 |
+| app/core/http                                                                                              |          1 |         52 |          2 |          8 |         62 |
+| app/core/services                                                                                          |          4 |        111 |          0 |         22 |        133 |
+| app/core/types                                                                                             |          5 |        221 |          1 |          8 |        230 |
+| app/core/utils                                                                                             |          3 |         56 |          2 |         10 |         68 |
+| app/features                                                                                               |         28 |        181 |          9 |         62 |        252 |
+| app/features/clients                                                                                       |          4 |         19 |          0 |          8 |         27 |
+| app/features/clients (Files)                                                                               |          1 |          9 |          0 |          3 |         12 |
+| app/features/clients/pages                                                                                 |          3 |         10 |          0 |          5 |         15 |
+| app/features/clients/pages/main-page                                                                       |          3 |         10 |          0 |          5 |         15 |
+| app/features/dashboard                                                                                     |          4 |         23 |          0 |          8 |         31 |
+| app/features/dashboard (Files)                                                                             |          1 |         13 |          0 |          3 |         16 |
+| app/features/dashboard/pages                                                                               |          3 |         10 |          0 |          5 |         15 |
+| app/features/dashboard/pages/main-page                                                                     |          3 |         10 |          0 |          5 |         15 |
+| app/features/games                                                                                         |          4 |         19 |          0 |          8 |         27 |
+| app/features/games (Files)                                                                                 |          1 |          9 |          0 |          3 |         12 |
+| app/features/games/pages                                                                                   |          3 |         10 |          0 |          5 |         15 |
+| app/features/games/pages/main-page                                                                         |          3 |         10 |          0 |          5 |         15 |
+| app/features/org-selection                                                                                 |          3 |         63 |          0 |         13 |         76 |
+| app/features/sessions                                                                                      |          4 |         19 |          0 |          8 |         27 |
+| app/features/sessions (Files)                                                                              |          1 |          9 |          0 |          3 |         12 |
+| app/features/sessions/pages                                                                                |          3 |         10 |          0 |          5 |         15 |
+| app/features/sessions/pages/main-page                                                                      |          3 |         10 |          0 |          5 |         15 |
+| app/features/settings                                                                                      |          4 |         19 |          0 |          8 |         27 |
+| app/features/settings (Files)                                                                              |          1 |          9 |          0 |          3 |         12 |
+| app/features/settings/pages                                                                                |          3 |         10 |          0 |          5 |         15 |
+| app/features/settings/pages/main-page                                                                      |          3 |         10 |          0 |          5 |         15 |
+| app/features/template                                                                                      |          1 |          0 |          9 |          1 |         10 |
+| app/features/users                                                                                         |          4 |         19 |          0 |          8 |         27 |
+| app/features/users (Files)                                                                                 |          1 |          9 |          0 |          3 |         12 |
+| app/features/users/pages                                                                                   |          3 |         10 |          0 |          5 |         15 |
+| app/features/users/pages/main-page                                                                         |          3 |         10 |          0 |          5 |         15 |
+| app/layout                                                                                                 |         15 |        293 |         10 |         48 |        351 |
+| app/layout (Files)                                                                                         |          3 |         83 |          0 |         10 |         93 |
+| app/layout/components                                                                                      |         12 |        210 |         10 |         38 |        258 |
+| app/layout/components/firms                                                                                |          3 |         45 |          0 |         13 |         58 |
+| app/layout/components/footer                                                                               |          3 |         19 |          0 |          6 |         25 |
+| app/layout/components/navigation                                                                           |          3 |        113 |         10 |         11 |        134 |
+| app/layout/components/organization                                                                         |          3 |         33 |          0 |          8 |         41 |
+| app/shared                                                                                                 |         28 |        737 |          2 |        139 |        878 |
+| app/shared/directives                                                                                      |          2 |         59 |          0 |         12 |         71 |
+| app/shared/pipes                                                                                           |          2 |         41 |          0 |          6 |         47 |
+| app/shared/ui                                                                                              |         24 |        637 |          2 |        121 |        760 |
+| app/shared/ui/block                                                                                        |          3 |         22 |          1 |          9 |         32 |
+| app/shared/ui/image-gallery                                                                                |          3 |         28 |          0 |          9 |         37 |
+| app/shared/ui/modal                                                                                        |          3 |         48 |          0 |          9 |         57 |
+| app/shared/ui/notifications                                                                                |          3 |         89 |          0 |         18 |        107 |
+| app/shared/ui/search-bar                                                                                   |          3 |         82 |          0 |         15 |         97 |
+| app/shared/ui/select                                                                                       |          3 |        223 |          1 |         36 |        260 |
+| app/shared/ui/tag                                                                                          |          3 |         58 |          0 |         17 |         75 |
+| app/shared/ui/tree                                                                                         |          3 |         87 |          0 |          8 |         95 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                   | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/app.config.ts                                     | TypeScript |         23 |          0 |          3 |         26 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/app.css                                           | PostCSS    |          4 |          0 |          1 |          5 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/app.html                                          | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/app.routes.ts                                     | TypeScript |         42 |          6 |          7 |         55 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/app.ts                                            | TypeScript |         10 |          0 |          2 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/environment/config.constants.ts              | TypeScript |          2 |          0 |          1 |          3 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/guards/auth.guard.ts                         | TypeScript |         30 |          0 |          6 |         36 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/guards/notauth.guard.ts                      | TypeScript |         30 |          0 |          6 |         36 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/http/interceptors.ts                         | TypeScript |         52 |          2 |          8 |         62 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/services/auth.service.ts                     | TypeScript |         33 |          0 |          8 |         41 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/services/main.service.ts                     | TypeScript |         44 |          0 |          7 |         51 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/services/navigation.service.ts               | TypeScript |         20 |          0 |          4 |         24 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/services/notification.service.ts             | TypeScript |         14 |          0 |          3 |         17 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/types/Icons.enum.ts                          | TypeScript |        192 |          1 |          1 |        194 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/types/Image.type.ts                          | TypeScript |          4 |          0 |          1 |          5 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/types/Node.type.ts                           | TypeScript |         10 |          0 |          2 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/types/Notification.type.ts                   | TypeScript |          6 |          0 |          1 |          7 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/types/Page.type.ts                           | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/utils/buildTree.ts                           | TypeScript |         35 |          2 |          8 |         45 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/utils/cleanObject.ts                         | TypeScript |         11 |          0 |          1 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/core/utils/groupBy.ts                             | TypeScript |         10 |          0 |          1 |         11 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/clients/pages/main-page/main-page.css    | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/clients/pages/main-page/main-page.html   | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/clients/pages/main-page/main-page.ts     | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/clients/routes.ts                        | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/dashboard/pages/main-page/main-page.css  | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/dashboard/pages/main-page/main-page.html | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/dashboard/pages/main-page/main-page.ts   | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/dashboard/routes.ts                      | TypeScript |         13 |          0 |          3 |         16 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/games/pages/main-page/main-page.css      | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/games/pages/main-page/main-page.html     | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/games/pages/main-page/main-page.ts       | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/games/routes.ts                          | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/org-selection/org-selection.css          | PostCSS    |         34 |          0 |          7 |         41 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/org-selection/org-selection.html         | HTML       |         10 |          0 |          1 |         11 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/org-selection/org-selection.ts           | TypeScript |         19 |          0 |          5 |         24 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/sessions/pages/main-page/main-page.css   | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/sessions/pages/main-page/main-page.html  | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/sessions/pages/main-page/main-page.ts    | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/sessions/routes.ts                       | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/settings/pages/main-page/main-page.css   | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/settings/pages/main-page/main-page.html  | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/settings/pages/main-page/main-page.ts    | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/settings/routes.ts                       | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/template/routes.ts                       | TypeScript |          0 |          9 |          1 |         10 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/users/pages/main-page/main-page.css      | PostCSS    |          0 |          0 |          1 |          1 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/users/pages/main-page/main-page.html     | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/users/pages/main-page/main-page.ts       | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/features/users/routes.ts                          | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/firms/firms.css                 | PostCSS    |          9 |          0 |          6 |         15 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/firms/firms.html                | HTML       |          4 |          0 |          1 |          5 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/firms/firms.ts                  | TypeScript |         32 |          0 |          6 |         38 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/footer/footer.css               | PostCSS    |          8 |          0 |          2 |         10 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/footer/footer.html              | HTML       |          2 |          0 |          1 |          3 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/footer/footer.ts                | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/navigation/navigation.css       | PostCSS    |         28 |          0 |          6 |         34 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/navigation/navigation.html      | HTML       |         17 |          0 |          1 |         18 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/navigation/navigation.ts        | TypeScript |         68 |         10 |          4 |         82 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/organization/organization.css   | PostCSS    |          9 |          0 |          3 |         12 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/organization/organization.html  | HTML       |          2 |          0 |          1 |          3 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/components/organization/organization.ts    | TypeScript |         22 |          0 |          4 |         26 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/layout.css                                 | PostCSS    |         29 |          0 |          5 |         34 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/layout.html                                | HTML       |         19 |          0 |          2 |         21 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/layout/layout.ts                                  | TypeScript |         35 |          0 |          3 |         38 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/directives/click-outside.ts                | TypeScript |         26 |          0 |          6 |         32 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/directives/visibleOnce.ts                  | TypeScript |         33 |          0 |          6 |         39 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/pipes/fileToDataUrl.pipe.ts                | TypeScript |         16 |          0 |          3 |         19 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/pipes/img.pipe.ts                          | TypeScript |         25 |          0 |          3 |         28 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/block/block.css                         | PostCSS    |         11 |          1 |          5 |         17 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/block/block.html                        | HTML       |          1 |          0 |          1 |          2 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/block/block.ts                          | TypeScript |         10 |          0 |          3 |         13 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/image-gallery/image-gallery.css         | PostCSS    |         13 |          0 |          5 |         18 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/image-gallery/image-gallery.html        | HTML       |          3 |          0 |          1 |          4 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/image-gallery/image-gallery.ts          | TypeScript |         12 |          0 |          3 |         15 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/modal/modal.css                         | PostCSS    |         31 |          0 |          5 |         36 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/modal/modal.html                        | HTML       |          6 |          0 |          0 |          6 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/modal/modal.ts                          | TypeScript |         11 |          0 |          4 |         15 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/notifications/notifications.css         | PostCSS    |         61 |          0 |         13 |         74 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/notifications/notifications.html        | HTML       |         11 |          0 |          2 |         13 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/notifications/notifications.ts          | TypeScript |         17 |          0 |          3 |         20 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/search-bar/search-bar.css               | PostCSS    |         24 |          0 |          4 |         28 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/search-bar/search-bar.html              | HTML       |         20 |          0 |          2 |         22 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/search-bar/search-bar.ts                | TypeScript |         38 |          0 |          9 |         47 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/select/select.css                       | PostCSS    |         79 |          1 |         15 |         95 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/select/select.html                      | HTML       |         54 |          0 |          2 |         56 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/select/select.ts                        | TypeScript |         90 |          0 |         19 |        109 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tag/tag.css                             | PostCSS    |         23 |          0 |          7 |         30 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tag/tag.html                            | HTML       |          4 |          0 |          1 |          5 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tag/tag.ts                              | TypeScript |         31 |          0 |          9 |         40 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tree/tree.css                           | PostCSS    |         41 |          0 |          5 |         46 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tree/tree.html                          | HTML       |         27 |          0 |          1 |         28 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/app/shared/ui/tree/tree.ts                            | TypeScript |         19 |          0 |          2 |         21 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/index.html                                            | HTML       |         12 |          0 |          1 |         13 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/main.ts                                               | TypeScript |          5 |          0 |          2 |          7 |
+| /Users/maksym/Documents/Projects/Roomly/frontend/src/styles.css                                            | PostCSS    |        100 |          2 |         25 |        127 |
+| Total                                                                                                      |            |      1,910 |         34 |        352 |      2,296 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

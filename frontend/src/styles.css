@@ -16,7 +16,7 @@ html, body {
   --border-color-primary: color-mix(in srgb, #B5AAED 80%, gray 80%);
   --hover-color-primary: #3817D8;
   --pressed-color-primary: #220F7F;
-  --focus-color-primary: #AC9FF0;
+  --focus-color-primary: #573cdf;
 
 
   --main-color-info: #0647A9;
@@ -31,7 +31,7 @@ html, body {
   --border-color-success: #B6CAAE;
   --hover-color-success: #1F4F09;
   --pressed-color-success: #122F05;
-  --focus-color-success: #B6CAAE;
+  --focus-color-success: #5e9547;
 
   --main-color-warning: #C4951B;
   --secondary-color-warning: #F3EAD1;
@@ -46,7 +46,7 @@ html, body {
   --border-color-danger: #E2B6B6;
   --hover-color-danger: #8C1E1E;
   --pressed-color-danger: #541212;
-  --focus-color-danger: #E2B6B6;
+  --focus-color-danger: #ec7575;
 }
 *,
 *::before,
@@ -55,7 +55,7 @@ html, body {
   margin: 0;
   box-sizing: border-box;
 
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono Light";
   font-optical-sizing: auto;
   font-style: normal;
 
@@ -73,6 +73,9 @@ body {
 
 h1,h2,h3,h4,h5,h6,span,a,li,div {
   color: var(--text-color-secondary);
+}
+p {
+  color: var(--text-color-primary);
 }
 
 /* Толщина скроллбара */
@@ -119,5 +122,48 @@ h1,h2,h3,h4,h5,h6,span,a,li,div {
   }
   &:hover {
     background: var(--hover-color-primary);
+  }
+}
+
+
+.btn {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border-radius: .5rem;
+
+  &.primary {
+    background: var(--focus-color-primary);
+    border: 1px solid var(--border-color-primary);
+    color: var(--text-color-primary);
+    &:hover {
+      background: var(--hover-color-primary);
+    }
+    &:active {
+      background: var(--pressed-color-primary);
+    }
+  }
+  &.success {
+    background: var(--focus-color-success);
+    border: 1px solid var(--border-color-success);
+    color: var(--text-color-primary);
+    &:hover {
+      background: var(--hover-color-success);
+    }
+    &:active {
+      background: var(--pressed-color-success);
+    }
+  }
+  &.danger {
+    background: var(--focus-color-danger);
+    border: 1px solid var(--border-color-danger);
+    color: var(--text-color-primary);
+    &:hover {
+      background: var(--hover-color-danger);
+    }
+    &:active {
+      background: var(--pressed-color-danger);
+    }
   }
 }
