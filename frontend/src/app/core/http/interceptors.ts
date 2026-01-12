@@ -1,9 +1,9 @@
 import { HttpEvent, HttpHandlerFn, HttpRequest } from '@angular/common/http';
-import { inject } from '@angular/core';
+import { inject, isDevMode } from '@angular/core';
 import { AuthService } from '@services/auth.service';
 import { catchError, Observable, throwError } from 'rxjs';
 import {NotificationService} from '@services/notification.service';
-import { API_URL, isDevMode } from '@env/config.constants';
+import { API_URL } from '@env/config.constants';
 
 export function loggingInterceptor(
   req: HttpRequest<unknown>,
@@ -12,7 +12,7 @@ export function loggingInterceptor(
   const authService = inject(AuthService);
 
   // Prefix relative URLs with API_URL, avoiding double slashes
-  if (isDevMode) {
+  if (isDevMode()) {
     if (!req.url.startsWith('http')) {
       const path = req.url.startsWith('/') ? req.url : `/${req.url}`;
       req = req.clone({
