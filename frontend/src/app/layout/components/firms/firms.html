@@ -1,0 +1,4 @@
+<app-select [options]="firms()" [value]="selected" [required]="true" (valueChange)="selectFirm($event)"></app-select>
+<div class="btn">
+  <ng-icon [name]="Icons.Cross" (click)="close.emit()" size="1.5rem"></ng-icon>
+</div>

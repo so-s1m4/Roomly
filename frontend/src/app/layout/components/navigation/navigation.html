@@ -1,0 +1,17 @@
+@if (!short()) {
+  <h2>NAVIGATION</h2>
+}
+<div class="pages" [ngStyle]="{
+  'padding': !short() ? '.5rem' : '0',
+}">
+  @for (page of pages; track page) {
+    @if (page.hidden && !page.hidden()  || !page.hidden){
+      <div class="page" (click)="clicked(page)">
+        <ng-icon [name]="page.icon"></ng-icon>
+        @if (!short()) {
+          <h3>{{ page.label }}</h3>
+        }
+      </div>
+    }
+  }
+</div>

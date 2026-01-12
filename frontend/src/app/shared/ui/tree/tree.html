@@ -1,0 +1,27 @@
+@if (node() != null) {
+  <div class="holder" [ngClass]="{
+  'opened': isOpened(),
+}">
+    <div class="this" (click)="isOpened.set(!isOpened()); selectNode.emit(node()!.id)">
+      @if (node()!.children && node()!.children!.length > 0) {
+        @if (isOpened()) {
+          <ng-icon [name]="Icons.ChevronDown" size="1rem"></ng-icon>
+        } @else {
+          <ng-icon [name]="Icons.ChevronRight" size="1rem"></ng-icon>
+        }
+      } @else {
+        <div class="spacer"></div>
+      }
+      <ng-icon [name]="node()!.icon"></ng-icon>
+      <h3>{{node()!.label}}</h3>
+    </div>
+    <div class="children">
+      @for (child of node()!.children; track child) {
+        <app-tree
+          [node]="child"
+          (selectNode)="selectNode.emit($event)"
+        ></app-tree>
+      }
+    </div>
+  </div>
+}

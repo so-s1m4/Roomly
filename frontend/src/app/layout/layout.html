@@ -1,15 +1,16 @@
-<app-block class="nav">
-  @for (page of pages; track page) {
-
-  <div class="btn svg" [routerLink]="page.path" [ngClass]="{
-      active: isActive(page.path)
-    }">
-    <ng-icon [name]="page.icon" color="#ff0000"></ng-icon>
-    <div class="label">
-      {{page.label}}
-    </div>
-  </div>
+<app-block class="nav" [ngClass]="{
+'opened': isNavOpened(),
+}">
+  @if (isNavOpened()){
+    <app-firms (close)="isNavOpened.set(false)"></app-firms>
+    <app-organization></app-organization>
+    <app-navigation></app-navigation>
+    <app-footer></app-footer>
   }
+  @else {
+    <app-navigation [short]='true' (openNav)="isNavOpened.set(true)"></app-navigation>
+  }
+
 </app-block>
 <div class="holder">
   <app-notifications></app-notifications>

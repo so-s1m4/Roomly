@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  width: max-content;
+  height: auto;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: auto;
+  .children {
+    display: none;
+    margin-left: .5rem;
+  }
+}
+.spacer {
+  width: 1rem;
+}
+.this {
+  width: fit-content;
+  height: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+  color: var(--text-color-secondary);
+
+  padding: .5rem;
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: var(--hover-color-primary);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: var(--pressed-color-primary);
+
+  }
+}
+.holder.opened {
+  &>.children {
+    display: block;
+  }
+}

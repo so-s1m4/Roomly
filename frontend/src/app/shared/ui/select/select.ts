@@ -8,6 +8,7 @@ export interface SelectOption {
   label: string;
   value: string | number;
   disabled?: boolean;
+  icon?: string;
 }
 
 @Component({
@@ -24,6 +25,7 @@ export class AppSelectComponent {
   @Input() options: SelectOption[] = [];
   @Input() placeholder = 'Select option';
   @Input() rounded = '2rem';
+  @Input() required = false;
   @Input() isMultiple = false;
   @Input() value: any | null = this.isMultiple ? [] : null;
 
@@ -81,7 +83,7 @@ export class AppSelectComponent {
         this.value = this.value ? [...this.value, opt.value ?? opt] : [opt.value ?? opt];
       }
     } else {
-      if (this.value === (opt.value ?? opt)) {
+      if (this.value === (opt.value ?? opt) && !this.required) {
        this.value = null;
       } else {
         this.value = opt.value ?? opt;

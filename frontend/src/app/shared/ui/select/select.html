@@ -44,6 +44,9 @@
                     ){
             <ng-icon [name]="Icons.Check" size="1.2rem"></ng-icon>
             }
+          @if (opt.icon) {
+            <ng-icon [name]="opt.icon" size="1.5rem"></ng-icon>
+          }
           {{ opt.label ?? opt }}
         </div>
       }

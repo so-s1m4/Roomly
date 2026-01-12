@@ -1,26 +1,37 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {Component, inject, OnInit, signal} from '@angular/core';
+import {ActivatedRoute, RouterLink, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {Notifications} from '@shared/ui/notifications/notifications';
 import {Block} from '@shared/ui/block/block';
 import { NgIcon } from '@ng-icons/core';
-import {Icons} from '@models/Icons.enum';
+import {Organization} from '@app/layout/components/organization/organization';
+import {Navigation} from '@app/layout/components/navigation/navigation';
+import {Footer} from '@app/layout/components/footer/footer';
+import Firms from '@app/layout/components/firms/firms';
+import {MainService} from '@services/main.service';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, RouterLink, CommonModule, Notifications, Block, NgIcon],
+  imports: [RouterOutlet, CommonModule, Notifications, Block, Organization, Navigation, Footer, Firms],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
   standalone: true,
 })
-export class Layout {
-  readonly pages = [
-    { label: 'Feed', path: '/feed', icon: Icons.Home },
-    { label: 'Projects', path: '/projects/search', icon: Icons.Search },
-    { label: 'More', path: '/more', icon: Icons.Bars4 },
-  ];
+export class Layout implements OnInit {
+  mainService = inject(MainService);
+  activatedRoute = inject(ActivatedRoute);
+  isNavOpened = signal(true);
 
-  isActive(path: string) {
-    return window.location.href.includes(path);
+  ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(params => {
+      const firmId = params.get('spaceId');
+      const nodeId = params.get('nodeId');
+      if (firmId) {
+        this.mainService.changeToFirm(firmId);
+      }
+      if (nodeId) {
+        this.mainService.currentNodeId.set(nodeId);
+      }
+    })
   }
 }
