@@ -11,6 +11,7 @@ export class MainService {
  currentNodeId= signal<string | number | null>(null);
  firms = signal<Array<{title: string; id: string | number}>>([]);
  treeNode = signal<NodeType>(null as unknown as NodeType);
+ flatNodes = signal<FlatNode[]>([]);
 
  router = inject(Router);
 
@@ -38,6 +39,7 @@ export class MainService {
    } else {
      d = [{id: '1', type: 'organization', label: 'Roomly', parentId: null}, {id: '2', type: 'place', label: 'Wien', parentId: '1'}, {id: '3', type: 'place', label: 'St.Pölten', parentId: '1'}, { id:'4', type:'location', label:'Traisenpark', parentId: '3'}, {id:'5', type:'location', label:'City Center', parentId:'2'}, {id:'6', type:'other', label:'Other', parentId:'3'}]
    }
+    this.flatNodes.set(d)
     this.treeNode.set(buildTree(d)[0])
   }
 

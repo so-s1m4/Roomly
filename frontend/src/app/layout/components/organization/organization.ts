@@ -16,6 +16,7 @@ export class Organization {
   mainService = inject(MainService);
   data = computed(()=>this.mainService.treeNode())
 
+  currentNodeId = computed(()=>this.mainService.currentNodeId())
   router = inject(Router);
   route = inject(ActivatedRoute)
 

@@ -1,0 +1,13 @@
+<div class="stars" (mouseleave)="clearHover()">
+  @for (star of [].constructor(max); let i = $index; track i) {
+    <span
+      class="star"
+      [class.active]="isActive(i + 1)"
+      [class.disabled]="disabled"
+      (mouseenter)="setHover(i + 1)"
+      (click)="setRating(i + 1)"
+    >
+    <ng-icon [name]="Icons.Star" size="2rem"></ng-icon>
+  </span>
+  }
+</div>

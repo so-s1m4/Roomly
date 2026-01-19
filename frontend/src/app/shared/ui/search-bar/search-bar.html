@@ -1,12 +1,13 @@
 <app-block>
   <div class="block">
     <div class="input-holder">
-      <label>{{placeholder()}}</label>
-      <input type="text" [(ngModel)]="value">
+      <input class="input" type="text" [(ngModel)]="value" (keyup)="onChange()" (change)="onChange()">
     </div>
-    <div class="btn main" (click)="onSubmit()">
-      <ng-icon size="1rem" [name]="Icons.Search"></ng-icon> <p>Search</p>
-    </div>
+    @if (!autoSubmit()) {
+      <div class="btn main" (click)="onSubmit()">
+        <ng-icon size="2rem" [name]="Icons.Search"></ng-icon> <p>Search</p>
+      </div>
+    }
   </div>
   @if (filters()) {
     <div class="filters-holder">

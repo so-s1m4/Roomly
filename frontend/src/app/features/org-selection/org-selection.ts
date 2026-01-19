@@ -16,7 +16,6 @@ export class OrgSelection {
   orgs = computed(()=>this.mainService.firms());
 
   router = inject(MainService).router;
-
   selectOrg(org: { title: string; id: string | number }) {
     this.router.navigate(['org', org.id, 'node', 'root']);
   }

@@ -66,6 +66,7 @@ export enum Icons {
   BugAnt = 'heroBugAntSolid',
   BuildingLibrary = 'heroBuildingLibrarySolid',
   BuildingOffice = 'heroBuildingOfficeSolid',
+  BuildingOffice2 = 'heroBuildingOffice2Solid',
   BuildingStorefront = 'heroBuildingStorefrontSolid',
   Cake = 'heroCakeSolid',
   Calculator = 'heroCalculatorSolid',

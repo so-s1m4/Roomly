@@ -62,6 +62,11 @@ export class Navigation {
       url: 'users',
     },
     {
+      label: 'Branches',
+      icon: Icons.BuildingOffice2,
+      url: 'branches',
+    },
+    {
       label: 'Settings',
       icon: Icons.Settings,
       url: 'settings',

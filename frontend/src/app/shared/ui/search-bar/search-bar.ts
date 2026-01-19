@@ -17,6 +17,7 @@ import {Icons} from '@models/Icons.enum';
   styleUrl: './search-bar.css'
 })
 export class SearchBar {
+  autoSubmit = input<boolean>(false);
   placeholder = input("Search...");
   value = model("")
 
@@ -37,10 +38,18 @@ export class SearchBar {
   onChangeValueFilter(filterLabel: string, filterValue: any) {
     this.filtersValues[filterLabel.toLowerCase()] = filterValue;
   }
+
+  onChange(){
+    if(this.autoSubmit()){
+      this.onSubmit();
+    }
+  }
 }
 
 
-type SearchOutput = {
-  value: string;
-  filters: {[key: string]: any};
+declare global {
+   type SearchOutput = {
+    value: string;
+    filters: {[key: string]: any};
+  }
 }

@@ -1,7 +1,10 @@
 <app-block>
   <div class="header">
     <img [src]="data()?.img?.image_path" alt="">
-    <h1 style="color: var(--text-color-primary)">Game Title</h1>
+    <h2 style="color: var(--text-color-primary)">{{data()?.title | slice:0:16}}</h2>
+    <div class="age">
+      <h3>{{data()?.minAge}}+</h3>
+    </div>
   </div>
   <div class="info">
     <div class="item">
@@ -17,7 +20,19 @@
     </div>
     <div class="item">
       <div class="label">Difficulty</div>
-      <div class="value">{{data()?.difficulty}}</div>
+      <div class="value">
+        <div class="stars">
+          @for (i of [].constructor(data()!.difficulty); track i) {
+            <ng-icon class="star" [name]="Icons.Star" size="1.5rem"></ng-icon>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="btn" routerLink="edit/{{data()?.id}}">
+      <ng-icon [name]="Icons.Pencil"></ng-icon>Edit
+
     </div>
   </div>
 </app-block>

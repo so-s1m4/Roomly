@@ -1,0 +1,9 @@
+<h2>{{role().name}}</h2>
+<div class="btns">
+  <div class="btn" routerLink="role/{{role().id}}">
+    <ng-icon [name]="Icons.Pencil"></ng-icon>
+  </div>
+  <div class="btn danger secondary">
+    <ng-icon [name]="Icons.Trash"></ng-icon>
+  </div>
+</div>

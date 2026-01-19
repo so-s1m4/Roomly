@@ -1,33 +1,45 @@
 :host {
   display: block;
-  width: max-content;
+  width: 100%;
   height: auto;
 }
 
 .holder {
   display: flex;
   flex-direction: column;
-  width: max-content;
+  width: 100%;
   height: auto;
   .children {
     display: none;
-    margin-left: .5rem;
+    margin-left: 1rem;
   }
 }
 .spacer {
   width: 1rem;
 }
 .this {
-  width: fit-content;
+  width: 100%;
   height: 3rem;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
+  justify-content: space-between;
   align-items: center;
-  color: var(--text-color-secondary);
 
+  gap: 1rem;
   padding: .5rem;
   border-radius: .5rem;
+
+  .item {
+
+    width: fit-content;
+    height: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    align-items: center;
+    color: var(--text-color-secondary);
+  }
+
+
 
   &:hover {
     background-color: var(--hover-color-primary);

@@ -74,6 +74,9 @@ body {
 h1,h2,h3,h4,h5,h6,span,a,li,div {
   color: var(--text-color-secondary);
 }
+.error {
+  color: var(--focus-color-danger);
+}
 p {
   color: var(--text-color-primary);
 }
@@ -123,6 +126,9 @@ p {
   &:hover {
     background: var(--hover-color-primary);
   }
+  &:active {
+    background: var(--pressed-color-primary);
+  }
 }
 
 
@@ -130,7 +136,7 @@ p {
   display: flex;
   gap: 1rem;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: .5rem;
 
   &.primary {
@@ -164,6 +170,126 @@ p {
     }
     &:active {
       background: var(--pressed-color-danger);
+    }
+  }
+
+  &.secondary.danger {
+    background: transparent;
+    border: none;
+    color: var(--text-color-secondary);
+    &:hover {
+      background: var(--hover-color-danger);
+    }
+    &:active {
+      background: var(--pressed-color-danger);
+    }
+  }
+}
+
+
+.inputs-flex {
+  display: flex;
+  gap: 1rem;
+}
+.input-holder {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  position: relative;
+
+  label {
+    position: absolute;
+    top: .25rem;
+    left: .7rem;
+    font-size: 1.4rem;
+    color: var(--text-color-secondary);
+  }
+  .input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--text-color-primary);
+    background: var(--secondary-color-primary);
+    border: 1px solid var(--border-color-primary);
+    border-radius: 1rem;
+    outline: none;
+
+    &:not([type='range']) {
+      &:focus {
+        outline: 2px solid var(--focus-color-primary);
+      }
+    }
+    &[type='number'] {
+      field-sizing: content;
+      max-width: 12ch;
+      min-width: 5ch;
+      appearance: textfield;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  .range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.4rem;
+    background: transparent;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  /* ===== TRACK ===== */
+  .range::-webkit-slider-runnable-track {
+    height: 0.8rem;
+    background: var(--pressed-color-primary, #ddd);
+    border-radius: 1rem;
+  }
+
+  .range::-moz-range-track {
+    height: 0.8rem;
+    background: var(--pressed-color-primary, #ddd);
+    border-radius: 1rem;
+  }
+
+  /* ===== THUMB ===== */
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--focus-color-primary);
+    border-radius: 50%;
+    border: none;
+    transform: translateY(-25%);
+    transition: background 0.2s ease-in-out, transform 0.1s;
+  }
+
+  .range::-webkit-slider-thumb:hover {
+    background: var(--hover-color-primary);
+    transform: scale(1.1) translateY(-25%);
+  }
+
+  .range::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--focus-color-primary);
+    border-radius: 50%;
+    border: none;
+    transition: background 0.2s ease-in-out, transform 0.1s;
+  }
+
+  .range::-moz-range-thumb:hover {
+    background: var(--hover-color-primary);
+    transform: scale(1.1);
+  }
+
+  &:has(label) {
+    .input {
+      padding-top: 2rem;
     }
   }
 }

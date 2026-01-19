@@ -1,1 +1,29 @@
-<p>Users works!</p>
+<div class="tree">
+  <h1>MANAGE USERS ACROSS LOCATIONS</h1>
+  <div class="tree-holder">
+    <app-tree [isOpenedByDefault]="true"
+              [size]="1.5"
+              [withEditBtn]="true" [node]="treeNodeWithUsers()"
+              (editedNode)="onEdit($event)"
+    ></app-tree>
+  </div>
+</div>
+<div class="roles">
+  <div class="wrapper">
+    <h1>ROLES</h1>
+    <div class="btn" routerLink="role/create"><ng-icon [name]="Icons.Plus"></ng-icon> Create</div>
+  </div>
+  <div class="holder">
+    @for (role of roles; track role.id) {
+      <app-role-card [role]="role"></app-role-card>
+    }
+  </div>
+</div>
+
+<app-modal
+  [showBackdrop]="false"
+  [ngStyle]="{
+  'display': (outlet?.isActivated ? 'block' : 'none')
+ }" routerLink="../users">
+  <router-outlet #outlet="outlet"></router-outlet>
+</app-modal>

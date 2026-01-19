@@ -4,8 +4,8 @@ import SessionRoutes from '@features/sessions/routes';
 import GamesRoutes from '@features/games/routes';
 import ClientsRoutes from '@features/clients/routes';
 import UsersRoutes from '@features/users/routes';
+import BranchesRoutes from '@features/branches/routes';
 import SettingsRoutes from '@features/settings/routes';
-import {RouteContextService} from '@services/route-context.service';
 
 export const routes: Routes = [
   {
@@ -30,6 +30,7 @@ export const routes: Routes = [
               ...GamesRoutes,
               ...ClientsRoutes,
               ...UsersRoutes,
+              ...BranchesRoutes,
               ...SettingsRoutes,
             ],
           },

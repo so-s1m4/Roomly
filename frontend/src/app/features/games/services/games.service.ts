@@ -26,4 +26,7 @@ export class GamesService {
         } },])
   }
 
+  getGameById(gameId: string) {
+    return this.games().find(i=> i.id === gameId);
+  }
 }

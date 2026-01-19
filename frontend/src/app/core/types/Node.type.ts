@@ -1,7 +1,7 @@
 declare type FlatNode = {
   id: string;
   parentId: string | null;
-  type: 'organization' | 'place' | 'location' | string;
+  type: 'organization' | 'place' | 'location' | 'user' | string;
   label: string;
 };
 

@@ -1,0 +1,27 @@
+:host {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15vw;
+  min-width: 500px;
+  height: 100%;
+
+  background: var(--secondary-color-primary);
+
+  animation: showingLeft 0.3s ease-in-out forwards;
+
+  border-left: 1px solid var(--border-color-primary);
+
+  padding: 2rem 0 0 0;
+
+  overflow: auto;
+}
+@keyframes showingLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+

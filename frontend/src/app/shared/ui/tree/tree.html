@@ -3,23 +3,36 @@
   'opened': isOpened(),
 }">
     <div class="this" (click)="isOpened.set(!isOpened()); selectNode.emit(node()!.id)">
+      <div class="item">
       @if (node()!.children && node()!.children!.length > 0) {
         @if (isOpened()) {
-          <ng-icon [name]="Icons.ChevronDown" size="1rem"></ng-icon>
+          <ng-icon [name]="Icons.ChevronDown" size="{{size() - .25}}rem"></ng-icon>
         } @else {
-          <ng-icon [name]="Icons.ChevronRight" size="1rem"></ng-icon>
+          <ng-icon [name]="Icons.ChevronRight" size="{{size() - .25}}rem"></ng-icon>
         }
       } @else {
         <div class="spacer"></div>
       }
-      <ng-icon [name]="node()!.icon"></ng-icon>
-      <h3>{{node()!.label}}</h3>
+      <ng-icon [name]="node()!.icon" size="{{size()}}rem"></ng-icon>
+      <h3
+        [ngStyle]="{
+        'color': node()?.id == selected() ? 'var(--text-color-primary)' : 'var(--text-color-secondary)',
+        }">{{node()!.label}}</h3>
+      </div>
+      @if (withEditBtn()){
+        <div class="btn danger secondary" (click)="stopPropagation($event); editedNode.emit(node()!)"><ng-icon [name]="Icons.Pencil" size="{{size()}}rem"></ng-icon></div>
+      }
     </div>
     <div class="children">
       @for (child of node()!.children; track child) {
         <app-tree
           [node]="child"
           (selectNode)="selectNode.emit($event)"
+          (editedNode)="editedNode.emit($event)"
+          [selected]="selected()"
+          [withEditBtn]="withEditBtn()"
+          [size]="size()"
+          [isOpenedByDefault]="isOpenedByDefault()"
         ></app-tree>
       }
     </div>

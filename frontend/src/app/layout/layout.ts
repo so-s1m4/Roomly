@@ -24,11 +24,7 @@ export class Layout implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
-      const firmId = params.get('spaceId');
       const nodeId = params.get('nodeId');
-      if (firmId) {
-        this.mainService.changeToFirm(firmId);
-      }
       if (nodeId) {
         this.mainService.currentNodeId.set(nodeId);
       }

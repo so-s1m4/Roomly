@@ -1,0 +1,27 @@
+<app-block>
+  <div class="img">
+    <img [src]="data()?.img?.image_path" alt="">
+  </div>
+  <div class="info">
+    <h2 style="color: var(--text-color-primary)">{{data()?.firstName}} {{data()?.lastName}} </h2>
+    <div class="item">
+      <div class="label">Birthdate</div>
+      <div class="value">{{data()?.birthDate | date:"dd.MM.yyyy"}}</div>
+    </div>
+    <div class="item">
+      <div class="label">Phone</div>
+      <div class="value">{{data()?.phone}}</div>
+    </div>
+    <div class="item">
+      <div class="label">Email</div>
+      <div class="value">{{data()?.email}}</div>
+    </div>
+  </div>
+
+  <div class="btns">
+    <div class="btn download">
+      <ng-icon [name]="Icons.ArrowDownTray"></ng-icon>
+    </div>
+  </div>
+
+</app-block>

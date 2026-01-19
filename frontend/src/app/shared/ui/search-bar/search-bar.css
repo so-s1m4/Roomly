@@ -1,14 +1,25 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
 .block {
   display: flex;
   flex-direction: row;
   gap: .5rem;
 
-  .input-holder {
-    width: 80%;
+  &:has(.btn) {
+    .input-holder {
+      width: 90%;
+    }
+    .btn {
+      width: 10%;
+      min-width: 50px;
+    }
   }
-  .btn {
-    width: 20%;
-    min-width: 50px;
+  &:not(:has(.btn)) {
+    .input-holder {
+      width: 100%;
+    }
   }
 }
 

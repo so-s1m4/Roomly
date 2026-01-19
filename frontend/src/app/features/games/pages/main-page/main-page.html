@@ -4,7 +4,7 @@
     <h2>Configure games and their availability across locations</h2>
   </div>
   <div class="block">
-    <div class="btn primary">
+    <div class="btn primary" routerLink="create">
       <ng-icon [name]="Icons.Plus"></ng-icon>
       Create Game
     </div>
@@ -17,31 +17,7 @@
       <h2>Total Games</h2>
     </div>
     <div class="body">
-      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">24</h1>
-    </div>
-  </app-block>
-  <app-block>
-    <div class="header">
-      <h2>Total Games</h2>
-    </div>
-    <div class="body">
-      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">24</h1>
-    </div>
-  </app-block>
-  <app-block>
-    <div class="header">
-      <h2>Total Games</h2>
-    </div>
-    <div class="body">
-      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">24</h1>
-    </div>
-  </app-block>
-  <app-block>
-    <div class="header">
-      <h2>Total Games</h2>
-    </div>
-    <div class="body">
-      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">24</h1>
+      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">{{games().length}}</h1>
     </div>
   </app-block>
 </div>
@@ -51,3 +27,11 @@
   <app-game [data]="game"></app-game>
 }
 </div>
+
+<app-modal
+  [showBackdrop]="false"
+  [ngStyle]="{
+  'display': (outlet?.isActivated ? 'block' : 'none')
+ }" routerLink="../games">
+  <router-outlet #outlet="outlet"></router-outlet>
+</app-modal>

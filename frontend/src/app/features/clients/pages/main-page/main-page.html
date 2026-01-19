@@ -1,1 +1,40 @@
-<p>Clients works!</p>
+<div class="header">
+  <div class="block">
+    <h1 style="color: var(--text-color-primary)">Clients Management</h1>
+    <h2>Manage your customer database and relationships</h2>
+  </div>
+  <div class="block">
+  </div>
+</div>
+
+<div class="sub-header">
+  <div class="row">
+  <app-block>
+    <div class="header">
+      <h2>Total Clients</h2>
+    </div>
+    <div class="body">
+      <h1 style="color: var(--text-color-primary); font-size: 2.5rem">{{clients().length}}</h1>
+    </div>
+  </app-block>
+  </div>
+<div class="row" style="flex-direction: column; gap: .5rem">
+  <h2>Search clients by name, email or phone</h2>
+  <app-search-bar [autoSubmit]="true" (submit)="onSubmitSearch($event)"></app-search-bar>
+</div>
+</div>
+
+
+<div class="content">
+  @for (client of clients(); track client.id) {
+    <app-client [data]="client"></app-client>
+  }
+</div>
+
+<app-modal
+  [showBackdrop]="false"
+  [ngStyle]="{
+  'display': (outlet?.isActivated ? 'block' : 'none')
+ }" routerLink="../games">
+  <router-outlet #outlet="outlet"></router-outlet>
+</app-modal>

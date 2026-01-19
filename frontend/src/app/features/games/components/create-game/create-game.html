@@ -1,0 +1,78 @@
+  <form action="" [formGroup]="createForm">
+  <div class="item">
+    <h1>IMAGE</h1>
+    <img [src]="createForm.value.img" style="border-radius: 1rem;height: 150px; object-fit: cover; width: 100%" alt="">
+
+    <div class="input-holder">
+      <label>URL</label>
+      <input formControlName="img" class="input" type="text" placeholder="https://" />
+    </div>
+  </div>
+  <div class="item">
+    <h1>TITLE</h1>
+    <div class="input-holder">
+      <input formControlName="title" class="input" type="text" />
+    </div>
+  </div>
+  <div class="flex" style="justify-content: space-between">
+    <div class="item">
+      <h1>PLAYERS</h1>
+      <div class="inputs-flex">
+        <div class="input-holder">
+          <label>MIN</label>
+          <input formControlName="minPlayers"  class="input" type="number" />
+        </div>
+        <div class="input-holder">
+          <label>MAX</label>
+          <input formControlName="maxPlayers"  class="input" type="number" />
+        </div>
+      </div>
+      @if (this.createForm.hasError('playersRange')) {
+        <h3 class="error">
+          Min players cannot exceed max players.
+        </h3>
+      }
+    </div>
+
+
+    <div class="item">
+      <h1>DURATION</h1>
+      <div class="inputs-flex">
+        <div class="input-holder">
+          <label>MIN</label>
+          <input formControlName="minPlayTime"  class="input" type="number" />
+        </div>
+        <div class="input-holder">
+          <label>MAX</label>
+          <input formControlName="maxPlayTime" class="input" type="number" />
+        </div>
+      </div>
+      @if (this.createForm.hasError('playtimeRange')) {
+        <h3 class="error">
+          Invalid playtime range.
+        </h3>
+      }
+    </div>
+  </div>
+
+
+  <div class="item">
+    <h1>DIFFICULTY </h1>
+    <app-star-rating formControlName="difficulty"></app-star-rating>
+  </div>
+  <div class="item">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+    <h1>MIN AGE </h1>
+    <h2 style="color: var(--text-color-primary)">{{createForm.value.minAge}}+</h2>
+    </div>
+    <div class="input-holder">
+      <input class="range" type="range" step="1" min="10" max="18" formControlName="minAge" />
+    </div>
+  </div>
+
+  <div class="item flex footer-btns">
+    <div class="btn success">
+      Create
+    </div>
+  </div>
+  </form>
